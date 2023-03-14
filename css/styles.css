@@ -99,7 +99,7 @@ button {
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -197,6 +197,13 @@ button {
 
   text-align: center;
   background-color: var(--dark-headings-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-title {
@@ -228,27 +235,42 @@ button {
 
 /* =============== \HERO =============== */
 
-/* =============== STRATEGY =============== */
+/* =============== ADVANTAGES =============== */
 
-.list.strategy-list {
+.section.advantages {
+  padding-bottom: 60px;
+}
+
+.list.advantages-list {
   display: flex;
   justify-content: space-between;
 }
 
-.strategy-item {
+.advantages-item {
   width: 264px;
 }
 
-.strategy-item:not(:last-child) {
+.advantages-wrapper {
+  display: flex;
+  background-color: var(--light-mode-color);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.advantages-item:not(:last-child) {
   margin-right: 24px;
 }
 
-/* =============== \STRATEGY =============== */
+/* =============== \ADVANTAGES =============== */
 
 /* =============== WORKS =============== */
 
 .section.works {
-  padding-top: 0;
+  padding-top: 60px;
 }
 
 .works-img {
@@ -265,31 +287,116 @@ button {
   background-color: var(--light-mode-color);
 }
 
-.team-member {
-  margin-bottom: 32px;
-}
-
-.position {
-  padding-bottom: 32px;
-}
-
-.name,
-.position {
-  text-align: center;
-}
-
 .employees {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
+.employees-card div {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.employees-card div p {
+  margin-bottom: 8px;
+}
+
 .employees-card {
   flex-basis: calc((100% - 72px) / 4);
   background-color: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.social-media-list {
+  display: flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-media-icon a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main_color);
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
+  padding: 4px;
+  border-radius: 9999px;
+}
+
+.social-media-icon a {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-brand-color);
+  border-radius: 50%;
+}
+
+.social-media-icon a:hover,
+.social-media-icon a:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.social-media-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--light-mode-color);
 }
 
 /* =============== \TEAM =============== */
+
+/* =============== Customers =============== */
+
+.customers {
+  background-color: var(--customers-background);
+  text-align: center;
+}
+
+.customers h2 {
+  margin-bottom: 72px;
+}
+
+.customers_list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.customers_list li svg {
+  max-width: 104px;
+  max-height: 56px;
+}
+
+.customers_list li a {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  border: 1px solid var(--helper-text-color);
+  border-radius: 4px;
+}
+
+.customers_list li a {
+  fill: var(--helper-text-color);
+}
+
+.customers_list li a:hover,
+.customers_list li a:focus {
+  border: 1px solid var(--pressed-state-color);
+  fill: var(--pressed-state-color);
+  transition: 0.3s;
+}
+
+/* =============== Customers =============== */
 
 /* =============== FOOTER =============== */
 
@@ -343,6 +450,8 @@ button {
 .filter-btn:focus {
   color: var(--body-dackground-color);
   background-color: var(--pressed-state-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .examples {
@@ -380,5 +489,5 @@ button {
 
 .examples-card:nth-last-child(-n + 3) {
   margin-bottom: 0;
-  }
+}
 /* =============== /PORTFOLIO =============== */
