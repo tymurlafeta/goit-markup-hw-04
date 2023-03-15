@@ -8,6 +8,7 @@
   --footer-text-color: #e7e9fc;
   --light-mode-color: #f4f4fd;
   --body-dackground-color: #ffffff;
+  --customers-background: #e5e5e5;
 }
 
 body {
@@ -67,7 +68,7 @@ button {
 }
 
 .section-subtitle {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   margin-bottom: 8px;
@@ -194,9 +195,7 @@ button {
 .section-hero {
   padding-top: 188px;
   padding-bottom: 188px;
-
   text-align: center;
-  background-color: var(--dark-headings-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -204,6 +203,7 @@ button {
     url(../images/people-office.jpg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
@@ -246,19 +246,15 @@ button {
   justify-content: space-between;
 }
 
-.advantages-item {
-  width: 264px;
-}
-
 .advantages-wrapper {
   display: flex;
+  width: 264px;
+  height: 112px;
   background-color: var(--light-mode-color);
   border-radius: 4px;
   margin-bottom: 8px;
   justify-content: center;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .advantages-item:not(:last-child) {
@@ -323,10 +319,6 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  max-width: 40px;
-  min-width: 40px;
-  max-height: 40px;
-  min-height: 40px;
   padding: 4px;
   border-radius: 9999px;
   width: 40px;
@@ -356,34 +348,28 @@ button {
   text-align: center;
 }
 
-.customers h2 {
-  margin-bottom: 72px;
-}
-
-.customers_list {
+.customers-list {
   display: flex;
-  list-style: none;
   justify-content: space-between;
 }
 
-.customers_list li svg {
-  max-width: 104px;
-  max-height: 56px;
-}
+.customers-list-item {
+  display: inline-flex;
+  justify-content: center;
+  align-self: center;
+ }
 
-.customers_list li a {
+.customers-list-link {
   display: inline-block;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  width: 168px;
+  height: 88px;
   border: 1px solid var(--helper-text-color);
   border-radius: 4px;
   fill: var(--helper-text-color);
 }
 
-.customers_list li a:hover,
-.customers_list li a:focus {
+.customers-list-link:hover,
+.customers-list-link:focus {
   border: 1px solid var(--pressed-state-color);
   fill: var(--pressed-state-color);
   transition: 0.3s;
@@ -417,7 +403,7 @@ button {
 }
 
 .footer-description {
-  width: 264px;
+  max-width: 264px;
   color: var(--footer-text-color);
 }
 
@@ -524,6 +510,7 @@ button {
 }
 
 .examples-card:hover {
+  cursor: pointer;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
