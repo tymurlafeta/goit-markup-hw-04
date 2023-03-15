@@ -46,6 +46,8 @@ ol {
 
 img {
   display: block;
+  min-width: 100px;
+  height: auto;
 }
 
 button {
@@ -85,11 +87,9 @@ button {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  max-width: 1158px;
+  padding: 0 15px;
 }
 
 .visually-hidden {
@@ -207,7 +207,7 @@ button {
 }
 
 .hero-title {
-  width: 496px;
+  max-width: 496px;
   margin-left: auto;
   margin-right: auto;
 
@@ -323,16 +323,12 @@ button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main_color);
   max-width: 40px;
   min-width: 40px;
   max-height: 40px;
   min-height: 40px;
   padding: 4px;
   border-radius: 9999px;
-}
-
-.social-media-icon a {
   width: 40px;
   height: 40px;
   background-color: var(--primary-brand-color);
@@ -383,9 +379,6 @@ button {
   padding-right: 32px;
   border: 1px solid var(--helper-text-color);
   border-radius: 4px;
-}
-
-.customers_list li a {
   fill: var(--helper-text-color);
 }
 
@@ -406,6 +399,10 @@ button {
   background-color: var(--dark-headings-color);
 }
 
+.footer-content {
+  display: flex;
+}
+
 .footer-logo {
   color: var(--light-mode-color);
   font-family: "Raleway", sans-serif;
@@ -424,6 +421,50 @@ button {
   color: var(--footer-text-color);
 }
 
+.footer-subtitle {
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.footer-social-media-list {
+  display: flex;
+  max-width: 208px;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-social-media {
+  margin-left: 120px;
+}
+
+.footer-social-media-icon a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40px;
+  min-width: 40px;
+  max-height: 40px;
+  min-height: 40px;
+  padding: 4px;
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-body-color);
+}
+
+.footer-social-media-icon a:hover,
+.footer-social-media-icon a:focus {
+  background-color: var(--success-messages-color);
+}
+
+.footer-social-media-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--light-mode-color);
+}
+
 /* =============== \FOOTER =============== */
 
 /* =============== PORTFOLIO =============== */
@@ -439,7 +480,7 @@ button {
 .filter-btn {
   display: inline-block;
   border-radius: 4px;
-  padding: 12px 24px;
+  padding: 10px 22px;
   font-weight: 500;
   color: var(--primary-brand-color);
   background-color: var(--light-mode-color);
@@ -472,15 +513,19 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 16px;
-  border-right: 1px solid #e7e9fc;
-  border-bottom: 1px solid #e7e9fc;
-  border-left: 1px solid #e7e9fc;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 
 .examples-card {
   width: calc((100% - 48px) / 3);
   margin-right: 24px;
   margin-bottom: 48px;
+}
+
+.examples-card:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .examples-card:nth-child(3n) {
